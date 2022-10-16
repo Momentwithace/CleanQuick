@@ -4,7 +4,7 @@ import com.momentwithace.cleanquick.data.dtos.request.*;
 import com.momentwithace.cleanquick.data.dtos.response.*;
 
 public interface UserService {
-    UserRegisterResponse register(UserRegisterRequest userRegisterRequest);
+    CustomerRegisterResponse register(CustomerRegisterRequest userRegisterRequest);
     UserLoginResponse login(UserLoginRequest userLoginRequest);
     ServiceRequestResponse serviceRequest(ServiceRequestRequest serviceRequestRequest);
     UpdateProfileResponse updateProfile(UpdateProfileRequest updateProfileRequest);

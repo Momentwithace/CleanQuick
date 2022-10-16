@@ -1,7 +1,6 @@
 package com.momentwithace.cleanquick.service;
 
 import com.momentwithace.cleanquick.data.models.VerificationToken;
-import com.momentwithace.cleanquick.service.notification.notificationService.VerificationTokenService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +15,7 @@ class VerificationTokenServiceImplTest {
     @Test
     void generateVerificationToken() {
         VerificationToken verificationToken =
-                verificationTokenService.generateVerificationToken("test@gmail.com");
+                verificationTokenService.generateVerificationToken("augustineezekiel763@gmail.com");
         assertThat(verificationToken.getToken().length()).isEqualTo(5);
     }
 }

@@ -1,6 +1,7 @@
-package com.momentwithace.cleanquick.service.notification.notificationService;
+package com.momentwithace.cleanquick.service;
 
 import com.momentwithace.cleanquick.data.models.VerificationToken;
+import com.momentwithace.cleanquick.service.VerificationTokenService;
 import com.momentwithace.cleanquick.utils.CleanQuickUtils;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +19,10 @@ public class VerificationTokenServiceImpl implements VerificationTokenService {
                 .expiresAt(LocalDateTime.now().plusMinutes(5)
                 ).build();
         return verificationToken;
+    }
+
+    @Override
+    public boolean isValidVerificationToken(VerificationToken verificationToken) {
+        return LocalDateTime.now().isBefore(verificationToken.getExpiresAt());
     }
 }

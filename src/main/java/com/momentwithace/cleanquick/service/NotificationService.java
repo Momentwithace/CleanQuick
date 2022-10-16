@@ -1,4 +1,4 @@
-package com.momentwithace.cleanquick.service.notification.notificationService;
+package com.momentwithace.cleanquick.service;
 
 import com.momentwithace.cleanquick.data.dtos.request.NotificationRequest;
 

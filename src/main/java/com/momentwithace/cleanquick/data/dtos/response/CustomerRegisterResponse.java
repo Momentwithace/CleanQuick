@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserRegisterResponse {
+public class CustomerRegisterResponse {
     private String message;
     private Long userId;
     private int code;

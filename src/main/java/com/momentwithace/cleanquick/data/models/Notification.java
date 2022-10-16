@@ -1,27 +1,22 @@
 package com.momentwithace.cleanquick.data.models;
 
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 @Getter
 @Setter
-@Builder
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-public class Address {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+@Entity
+public class Notification {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int buildingNumber;
-    private String street;
-    private String city;
-    private String country;
-
+    private String body;
 }
